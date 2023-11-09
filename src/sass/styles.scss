@@ -6,7 +6,8 @@
 
 $breakpoint-lg: 997px;
 
-html {
+body {
+  font-family: 'Lato', sans-serif;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -15,10 +16,6 @@ html {
   @media screen and (min-width: $breakpoint-lg) {
     align-items: center;
   }
-}
-
-body {
-  font-family: 'Lato', sans-serif;
 }
 
 p {
