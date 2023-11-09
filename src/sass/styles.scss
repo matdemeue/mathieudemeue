@@ -1,0 +1,55 @@
+@import 'reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display&display=swap');
+
+@import 'mixin';
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 100vh;
+}
+
+p {
+  @include font-size(16);
+}
+
+main {
+  width: 450px;
+  padding: 3rem;
+}
+
+.subtitle {
+  @include font-size(18);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.250rem
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  @include font-size(24);
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  margin-bottom: 1rem;
+}
+
+.box {
+  margin-top: 2rem;
+
+  p {
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      margin-right: 1rem;
+    }
+  }
+}

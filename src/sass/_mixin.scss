@@ -1,0 +1,52 @@
+$line-height-factor: 1.5;
+
+// FONT SIZE
+// Converts a points value to rems and adds a default
+// line-height bases on $line-height-factor.
+// Examples:
+// - @include font-size(24, 18)
+// - @include font-size(24, 0) will return no line-height
+
+@mixin font-size($values...) {
+  $max: length($values);
+  $font-size: 16 !default;
+  $line-height: false !default;
+
+  // If font-size is supplied, override default
+  @if $max != 0 {
+    $font-size: nth($values, 1);
+  }
+
+  // If line-height is supplied, override default
+  @if $max > 1 and type-of(nth($values, 2)) == number {
+    $line-height: nth($values, 2);
+  }
+
+    // Else calculate line-height using $font-size
+  @else if $line-height == false {
+    $line-height: $font-size * $line-height-factor;
+  }
+
+  // Output supplied values
+  @if $max != 0 {
+    @if nth($values, $max) == '!important' {
+      font-size: $font-size / 16 + rem !important;
+
+      @if $line-height != 0 {
+        line-height: $line-height / 16 + rem !important;
+      }
+    }
+    @else {
+      font-size: $font-size / 16 + rem;
+
+      @if $line-height != 0 {
+        line-height: $line-height / 16 + rem;
+      }
+    }
+  }
+    // Else output default values
+  @else {
+    font-size: $font-size / 16 + rem;
+    line-height: $line-height / 16 + rem;
+  }
+}
