@@ -9,12 +9,12 @@ $breakpoint-lg: 997px;
 body {
   font-family: 'Lato', sans-serif;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
 
   @media screen and (min-width: $breakpoint-lg) {
-    align-items: flex-end;
+    align-items: center;
   }
 }
 
