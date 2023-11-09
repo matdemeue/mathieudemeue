@@ -53,17 +53,20 @@ table {
   border-spacing: 0;
 }
 
-body {
-  font-family: "Lato", sans-serif;
+html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   height: 100%;
 }
 @media screen and (min-width: 997px) {
-  body {
+  html {
     align-items: center;
   }
+}
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
 p {
