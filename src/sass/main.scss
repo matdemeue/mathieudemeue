@@ -37,7 +37,7 @@ main {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 800;
 
@@ -57,13 +57,17 @@ main {
 .experience-section {
 
   .experience {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1.5;
 
     a {
       color: #006db6;
       text-decoration: none;
       border-bottom: 2px solid #006db6;
+    }
+
+    @media screen and (min-width: 997px) {
+      font-size: 1.25rem;
     }
   }
 }
