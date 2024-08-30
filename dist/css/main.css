@@ -326,7 +326,7 @@ h1 {
 }
 
 main {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1.25rem;
 }
@@ -365,23 +365,66 @@ main {
 }
 
 .intro-section {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
-
-.experience-section .experience {
+.intro-section .experiences {
+  margin-top: 2rem;
+}
+.intro-section .experiences .experience {
   font-size: 1rem;
   line-height: 1.5;
   color: #999999;
 }
-.experience-section .experience a {
+.intro-section .experiences .experience a {
   color: #006db6;
   text-decoration: none;
   border-bottom: 1px solid #006db6;
 }
 @media screen and (min-width: 997px) {
-  .experience-section .experience {
+  .intro-section .experiences .experience {
     font-size: 1.25rem;
   }
+}
+
+.conferences-and-events h3 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media screen and (min-width: 997px) {
+  .conferences-and-events h3 {
+    text-align: start;
+  }
+}
+.conferences-and-events .events-list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 997px) {
+  .conferences-and-events .events-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.conferences-and-events .event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conferences-and-events .event .event-badge {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 0.75rem;
+}
+.conferences-and-events .event .event-details {
+  text-align: center;
+}
+.conferences-and-events .event .event-details h2 {
+  font-size: 1.25rem;
+}
+.conferences-and-events .event .event-details h3 {
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .company {
